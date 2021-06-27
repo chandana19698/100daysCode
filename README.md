@@ -1,2 +1,2 @@
 # 100daysCode
-Python course challenges
+Challenges from an Udemy course on python
