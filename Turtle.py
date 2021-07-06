@@ -50,3 +50,28 @@ for i in range(3, 11):
 screen = Screen()
 screen.exitonclick()
 
+
+#Random path
+
+import turtle as t
+from turtle import Turtle, Screen
+import random
+
+tim = t.Turtle()
+
+colors = ["forest green", "green yellow", "red", "medium spring green", "blue"]
+directions=[0, 90, 180, 360]
+tim.pensize(15)
+tim.speed("fastest")
+
+
+
+
+for i in range(200):
+    tim.color(random.choice(colors))
+    tim.forward(30)
+    tim.setheading(random.choice(directions))
+
+
+screen = Screen()
+screen.exitonclick()
