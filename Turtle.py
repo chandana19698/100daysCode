@@ -105,3 +105,42 @@ def spirograph(size):
 spirograph(5)
 screen = Screen()
 screen.exitonclick()
+
+
+#Hirst painting 
+
+import turtle
+import turtle as t
+from turtle import Turtle, Screen
+import random
+
+tim = t.Turtle()
+turtle.colormode(255)
+
+def randomColor():
+    r=random.randint(0, 255)
+    g=random.randint(0, 255)
+    b=random.randint(0, 255)
+    color = (r, g, b)
+    return color
+
+tim.speed("fastest")
+tim.setheading(230)
+tim.penup()
+tim.hideturtle()
+tim.forward(300)
+tim.setheading(0)
+number=100
+
+for i in range(1,number+1):
+    tim.dot(20,randomColor())
+    tim.forward(50)
+
+    if i%10==0:
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(180)
+        tim.forward(500)
+        tim.setheading(0)
+screen = Screen()
+screen.exitonclick()
