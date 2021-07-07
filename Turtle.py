@@ -75,3 +75,33 @@ for i in range(200):
 
 screen = Screen()
 screen.exitonclick()
+
+
+#Spirograph
+
+import turtle
+import turtle as t
+from turtle import Turtle, Screen
+import random
+
+tim = t.Turtle()
+
+def randomColor():
+    r=random.randint(0, 255)
+    g=random.randint(0, 255)
+    b=random.randint(0, 255)
+    color = (r, g, b)
+    return color
+
+def spirograph(size):
+    for i in range(360//size):
+        turtle.colormode(255)
+        tim.color(randomColor())
+        tim.speed("fastest")
+        tim.circle(100)
+        current_heading=tim.heading()
+        tim.setheading(current_heading+size)
+
+spirograph(5)
+screen = Screen()
+screen.exitonclick()
